@@ -19,3 +19,8 @@ nav{
   grid-gap: 1rem;
   gap: 1rem;
 }
+.search-btn{
+  position: absolute;
+  top: 0;
+  right: 0.5rem;
+}
