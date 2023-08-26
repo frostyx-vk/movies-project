@@ -1,9 +1,21 @@
+import React from "react"
+import { Movies } from "../components/Movies";
 
+class Main extends React.Component {
 
-function Main() {
-    return <main className="container content">
-        Hello? I am Movies content
+    state = {
+        movies: []
+    };
+
+    render() {
+        const {movies} = this.state;
+
+        return <main className="container content">
+            {
+                movies.length ? <Movies movies={this.state.movies} /> : <h4>Loading...</h4>
+            }
         </main>
+    }
 }
 
 export { Main }
