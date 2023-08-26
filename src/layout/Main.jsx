@@ -7,6 +7,12 @@ class Main extends React.Component {
         movies: []
     };
 
+    componentDidMount(){
+        fetch('http://www.omdbapi.com/?apikey=926935bd&s=matrix')
+        .then(response => response.json())
+        .then(data => this.setState({movies: data.Search}))
+    }
+
     render() {
         const {movies} = this.state;
 
